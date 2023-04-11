@@ -26,9 +26,9 @@ classifiers = [
 dependencies = ['numpy', 'sympy']
 
 [project.urls]
-Documentation = "https://github.com/unknown/paraxial#readme"
-Issues = "https://github.com/unknown/paraxial/issues"
-Source = "https://github.com/unknown/paraxial"
+Documentation = "https://github.com/danieldmulkey/paraxial#readme"
+Issues = "https://github.com/danieldmulkey/paraxial/issues"
+Source = "https://github.com/danieldmulkey/paraxial"
 
 [tool.hatch.version]
 path = "src/paraxial/__about__.py"

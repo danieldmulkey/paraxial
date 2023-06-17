@@ -64,7 +64,7 @@ class ABCD:
     def __imatmul__(self, other):
         return other @ self
 
-    def add_misalignments(self, disp, tilt, length):
+    def add_misalignments(self, disp=0, tilt=0, length=0):
         self.E = (1 - self.A) * disp + (length - self.n1 * self.B) * tilt 
         self.F = -self.C * disp + (self.n2 - self.n1 * self.D) * tilt
 

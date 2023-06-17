@@ -1,4 +1,5 @@
 import math
+import numpy as np
 
 """Docstring for the equations.py module.
 
@@ -90,7 +91,7 @@ def fiber_coupling_efficiency(
         focii in µm.
     angular : float
         Angle between propagation directions of incoming
-        and fiber focii in degrees.
+        and fiber focii in radians.
     λ : float
         Vacuum wavelength in µm.
     n : float
@@ -114,10 +115,10 @@ def fiber_coupling_efficiency(
     B = G**2 + (D + 1) ** 2
     C = (
         (D + 1) * F**2
-        + 2 * D * F * G * math.sin(math.radians(angular))
-        + D * (G**2 + D + 1) * math.sin(math.radians(angular)) ** 2
+        + 2 * D * F * G * np.sin(angular)
+        + D * (G**2 + D + 1) * np.sin(angular) ** 2
     )
-    η = 4 * D / B * math.exp(-A * C / B)
+    η = 4 * D / B * np.exp(-A * C / B)
     return η
 
 

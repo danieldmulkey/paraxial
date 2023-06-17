@@ -7,7 +7,7 @@ name = "paraxial"
 dynamic = ["version"]
 description = 'A library for nontrivial paraxial optics calculations'
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3.9"
 license = "MIT"
 keywords = []
 authors = [
@@ -16,7 +16,6 @@ authors = [
 classifiers = [
   "Development Status :: 4 - Beta",
   "Programming Language :: Python",
-  "Programming Language :: Python :: 3.8",
   "Programming Language :: Python :: 3.9",
   "Programming Language :: Python :: 3.10",
   "Programming Language :: Python :: 3.11",
@@ -51,10 +50,11 @@ cov = [
 ]
 
 [[tool.hatch.envs.test.matrix]]
-python = ["3.8", "3.9", "3.10", "3.11"]
+python = ["3.9", "3.10", "3.11"]
 
 [tool.hatch.build.targets.sdist]
 exclude = [
+  "/.vscode",
   "/.gitattributes",
   "/.gitignore",
   "/.git",
@@ -66,7 +66,7 @@ exclude = [
 packages = ["src/paraxial"]
 
 [[tool.hatch.envs.all.matrix]]
-python = ["3.8", "3.9", "3.10", "3.11"]
+python = ["3.9", "3.10", "3.11"]
 
 [tool.hatch.envs.lint]
 detached = true
